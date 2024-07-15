@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git and Github Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #000000;
+            color: white;
+        }
+        h1, h2, h3 {
+            color: #ccc;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        code {
+            background-color: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: black;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        a {
+            color: white;
+        }
+        .middle {
+            margin: 1rem auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning Git</h1>
+    <p>Once upon a time, there was a magical tool called <strong>Git</strong> that helped developers manage their code and work together seamlessly. Let's embark on a journey to understand how Git works and discover some of its magical commands!</p>
+
+    <h2>Setting Up Git</h2>
+    <p>Before we start using Git, we need to set it up on our computer.</p>
+    <pre><code>git config --global user.name "Your Name"</code></pre>
+    <p>This command tells Git who you are by setting your name.</p>
+    <pre><code>git config --global user.email "you@example.com"</code></pre>
+    <p>And this command sets your email address. Now Git knows who you are!</p>
+
+    <h2>Starting a New Project</h2>
+    <p>Imagine you want to start a new project. You can use Git to create a magical repository to store your project's code.</p>
+    <pre><code>git init</code></pre>
+    <p>This command creates a new Git repository in your project's folder.</p>
+
+    <h2>Tracking Changes</h2>
+    <p>As you work on your project, you'll make changes to your code. Git can help you track these changes.</p>
+    <pre><code>git add .</code></pre>
+    <p>This command adds all the changes you've made to a staging area, like preparing them for a magic show.</p>
+    <pre><code>git commit -m "Describe your changes"</code></pre>
+    <p>With this command, you take a snapshot of your changes and save it with a message describing what you did. It's like taking a photo and writing a caption.</p>
+
+    <h2>Seeing the Magic</h2>
+    <p>Want to see the history of your project? Git can show you all the snapshots you've taken.</p>
+    <pre><code>git log</code></pre>
+    <p>This command shows a list of all the commits (snapshots) you've made so far.</p>
+
+    <h2>Branching Out</h2>
+    <p>Imagine you want to try something new without messing up your main project. You can create a branch, a separate path where you can experiment.</p>
+    <pre><code>git branch new-feature</code></pre>
+    <p>This command creates a new branch called <code>new-feature</code>.</p>
+    <pre><code>git checkout new-feature</code></pre>
+    <p>And this command switches you to the new branch so you can start working on your experiment.</p>
+
+    <h2>Merging Paths</h2>
+    <p>When you're happy with your experiment, you can merge it back into your main project.</p>
+    <pre><code>git checkout main</code></pre>
+    <p>First, switch back to your main branch.</p>
+    <pre><code>git merge new-feature</code></pre>
+    <p>Then, merge your new feature into the main branch. Now your project has all the new magic!</p>
+
+    <h2>Working Together</h2>
+    <p>Git is great for working with friends too! You can push your changes to a shared repository so everyone can see them.</p>
+    <pre><code>git remote add origin https://github.com/your-repo.git</code></pre>
+    <p>This command tells Git where the shared repository is located.</p>
+    <pre><code>git push -u origin main</code></pre>
+    <p>And this command pushes your changes to the shared repository. Now your friends can see your work!</p>
+
+    <h2>Updating Your Project</h2>
+    <p>When your friends make changes, you can pull their updates into your project.</p>
+    <pre><code>git pull origin main</code></pre>
+    <p>This command fetches the latest changes from the shared repository and merges them into your project.</p>
+
+    <h2>Undoing Mistakes</h2>
+    <p>If you ever make a mistake, Git can help you go back in time and fix it.</p>
+    <pre><code>git checkout -- filename</code></pre>
+    <p>This command discards changes in a file and reverts it to the last commit.</p>
+    <pre><code>git revert commit-hash</code></pre>
+    <p>This command creates a new commit that undoes the changes from a specific commit, identified by its hash.</p>
+
+    <h2>Exploring More Commands</h2>
+    <p>Here are a few more magical Git commands to explore:</p>
+    <ul>
+        <li><code>git status</code>: Shows the current status of your project.</li>
+        <li><code>git diff</code>: Shows the differences between your changes and the last commit.</li>
+        <li><code>git clone https://github.com/your-repo.git</code>: Creates a copy of a repository from GitHub.</li>
+        <li><code>git stash</code>: Temporarily saves your changes so you can work on something else.</li>
+        <li><code>git stash pop</code>: Applies the changes you stashed earlier.</li>
+    </ul>
+
+    
+    <p>And that's a brief introduction to the magical world of Git! With these commands, you can manage your projects, work with friends, and fix mistakes. Happy coding!</p>
+
+    <h1>Learning GitHub</h1>
+    <p>After learning about Git, let's take our journey to the next level by exploring GitHub. GitHub is like a magical castle where developers from all over the world share their projects and work together.</p>
+
+    <h2>Creating a GitHub Account</h2>
+    <p>First, you need to create a GitHub account. Go to <a href="https://github.com">GitHub</a> and sign up. Once you have an account, you're ready to start using GitHub!</p>
+
+    <h2>Creating a New Repository</h2>
+    <p>Imagine you want to share your project with the world. You can create a repository on GitHub to store your project.</p>
+    <p>Click on the "+" icon at the top right and select "New repository." Give your repository a name, like <code>my-website</code>, and click "Create repository."</p>
+
+    <h2>Connecting Your Local Project to GitHub</h2>
+    <p>Now that you have a repository on GitHub, let's connect it to your local project. First, make sure you're in your project's directory:</p>
+    <pre><code>cd my-website</code></pre>
+    <p>Next, add the remote repository:</p>
+    <pre><code>git remote add origin https://github.com/your-username/my-website.git</code></pre>
+    <p>Now your local project is linked to your GitHub repository.</p>
+
+    <h2>Pushing Your Code to GitHub</h2>
+    <p>Let's push our code to GitHub so others can see it:</p>
+    <pre><code>git push -u origin main</code></pre>
+    <p>This command sends your code to GitHub. If you refresh your GitHub repository page, you'll see your files there!</p>
+
+    <h2>Collaborating with Others</h2>
+    <p>GitHub makes it easy to work with friends. They can clone your repository to get a copy of your project:</p>
+    <pre><code>git clone https://github.com/your-username/my-website.git</code></pre>
+    <p>Now your friends have their own copy of your project. They can make changes and push them back to GitHub:</p>
+    <pre><code>git add .</code></pre>
+    <pre><code>git commit -m "Describe your changes"</code></pre>
+    <pre><code>git push origin main</code></pre>
+
+    <h2>Pull Requests</h2>
+    <p>When your friends make changes, they can create a pull request. A pull request lets you review their changes before merging them into your project.</p>
+    <p>On GitHub, go to the "Pull requests" tab in your repository and click "New pull request." Your friend can then submit their changes for you to review. If you're happy with their changes, you can merge the pull request.</p>
+
+    <h2>Issues and Project Management</h2>
+    <p>GitHub also helps you keep track of tasks and bugs. You can create issues to note down things that need to be done or fixed.</p>
+    <p>Go to the "Issues" tab in your repository and click "New issue." Describe the task or bug, and assign it to someone. This way, everyone knows what needs to be worked on.</p>
+
+    <h2>Exploring More GitHub Features</h2>
+    <p>GitHub has many more features to explore:</p>
+    <ul>
+        <li><code>GitHub Pages</code>: Host your website directly from a GitHub repository.</li>
+        <li><code>Actions</code>: Automate workflows, like running tests or deploying code.</li>
+        <li><code>Wiki</code>: Create documentation for your project.</li>
+        <li><code>Fork</code>: Create your own copy of someone else's repository to experiment with.</li>
+    </ul>
+
+    <p>And that's a brief introduction to the magical world of GitHub! With Git and GitHub, you can manage your projects, collaborate with friends, and share your work with the world. Happy coding!</p>
+
+
+    <h1>Another Git Example: Creating a Website</h1>
+    <p>Let's imagine you're starting a new website project. We'll use Git to track our progress and make sure everything is organized.</p>
+
+    <h2>Step 1: Setting Up Git</h2>
+    <p>First, we need to set up Git with our name and email:</p>
+    <pre><code>git config --global user.name "Your Name"</code></pre>
+    <pre><code>git config --global user.email "you@example.com"</code></pre>
+
+    <h2>Step 2: Creating a New Project</h2>
+    <p>Next, let's create a new folder for our website project and initialize a Git repository:</p>
+    <pre><code>mkdir my-website</code></pre>
+    <pre><code>cd my-website</code></pre>
+    <pre><code>git init</code></pre>
+    <p>Now we have an empty Git repository in our <code>my-website</code> folder.</p>
+
+    <h2>Step 3: Adding Some Files</h2>
+    <p>Let's add an <code>index.html</code> file to our project:</p>
+    <pre><code>echo "&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;My Website&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Welcome to My Website&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;" > index.html</code></pre>
+    <p>Now we have a basic HTML file. Let's add it to Git:</p>
+    <pre><code>git add index.html</code></pre>
+    <p>And commit our changes:</p>
+    <pre><code>git commit -m "Add index.html"</code></pre>
+
+    <h2>Step 4: Making Changes</h2>
+    <p>Let's make some changes to our <code>index.html</code> file. We'll add a paragraph:</p>
+    <pre><code>echo "&lt;p&gt;This is my first website.&lt;/p&gt;" >> index.html</code></pre>
+    <p>Now our file has been updated. Let's check the status:</p>
+    <pre><code>git status</code></pre>
+    <p>We can see the file has been modified. Let's add and commit our changes:</p>
+    <pre><code>git add index.html</code></pre>
+    <pre><code>git commit -m "Add a paragraph to index.html"</code></pre>
+
+    <h2>Step 5: Creating a Branch</h2>
+    <p>Imagine we want to add a new feature to our website, like a contact form. We can create a new branch for this:</p>
+    <pre><code>git branch contact-form</code></pre>
+    <pre><code>git checkout contact-form</code></pre>
+    <p>Now we're on the <code>contact-form</code> branch. Let's add a simple contact form to our <code>index.html</code> file:</p>
+    <pre><code>echo "&lt;form&gt;&lt;label for='name'&gt;Name:&lt;/label&gt;&lt;input type='text' id='name' name='name'&gt;&lt;br&gt;&lt;label for='email'&gt;Email:&lt;/label&gt;&lt;input type='email' id='email' name='email'&gt;&lt;br&gt;&lt;input type='submit' value='Submit'&gt;&lt;/form&gt;" >> index.html</code></pre>
+    <p>Let's add and commit our changes:</p>
+    <pre><code>git add index.html</code></pre>
+    <pre><code>git commit -m "Add contact form to index.html"</code></pre>
+
+    <h2>Step 6: Merging Branches</h2>
+    <p>We're happy with our new contact form. Let's merge it back into our main project:</p>
+    <pre><code>git checkout main</code></pre>
+    <pre><code>git merge contact-form</code></pre>
+    <p>Now our main branch has the contact form feature!</p>
+
+    <h2>Step 7: Pushing to GitHub</h2>
+    <p>Finally, let's share our project on GitHub. First, we need to add a remote repository:</p>
+    <pre><code>git remote add origin https://github.com/your-username/my-website.git</code></pre>
+    <p>And push our changes:</p>
+    <pre><code>git push -u origin main</code></pre>
+    <p>Now our project is on GitHub, and our friends can see it!</p>
+
+    <h2>Step 8: Pulling Changes</h2>
+    <p>If our friends make changes to the project, we can pull their updates:</p>
+    <pre><code>git pull origin main</code></pre>
+    <p>And our project will be up to date with the latest changes.</p>
+
+    <p>That's another example of how to use Git to manage a project. With these steps, you can create, modify, and share your projects with ease. Happy coding!</p>
+
+    <h1>Another GitHub Example</h1>
+    <p>After learning about Git, let's take our journey to the next level by exploring GitHub. GitHub is like a magical castle where developers from all over the world share their projects and work together.</p>
+
+    <h2>Creating a GitHub Account</h2>
+    <p>First, you need to create a GitHub account. Go to <a href="https://github.com">GitHub</a> and sign up. Once you have an account, you're ready to start using GitHub!</p>
+
+    <h2>Creating a New Repository</h2>
+    <p>Imagine you want to share your project with the world. You can create a repository on GitHub to store your project.</p>
+    <p>Click on the "+" icon at the top right and select "New repository." Give your repository a name, like <code>my-website</code>, and click "Create repository."</p>
+
+    <h2>Connecting Your Local Project to GitHub</h2>
+    <p>Now that you have a repository on GitHub, let's connect it to your local project. First, make sure you're in your project's directory:</p>
+    <pre><code>cd my-website</code></pre>
+    <p>Next, add the remote repository:</p>
+    <pre><code>git remote add origin https://github.com/your-username/my-website.git</code></pre>
+    <p>Now your local project is linked to your GitHub repository.</p>
+
+    <h2>Pushing Your Code to GitHub</h2>
+    <p>Let's push our code to GitHub so others can see it:</p>
+    <pre><code>git push -u origin main</code></pre>
+    <p>This command sends your code to GitHub. If you refresh your GitHub repository page, you'll see your files there!</p>
+
+    <h2>Collaborating with Others</h2>
+    <p>GitHub makes it easy to work with friends. They can clone your repository to get a copy of your project:</p>
+    <pre><code>git clone https://github.com/your-username/my-website.git</code></pre>
+    <p>Now your friends have their own copy of your project. They can make changes and push them back to GitHub:</p>
+    <pre><code>git add .</code></pre>
+    <pre><code>git commit -m "Describe your changes"</code></pre>
+    <pre><code>git push origin main</code></pre>
+
+    <h2>Pull Requests</h2>
+    <p>When your friends make changes, they can create a pull request. A pull request lets you review their changes before merging them into your project.</p>
+    <p>On GitHub, go to the "Pull requests" tab in your repository and click "New pull request." Your friend can then submit their changes for you to review. If you're happy with their changes, you can merge the pull request.</p>
+
+    <h2>Issues and Project Management</h2>
+    <p>GitHub also helps you keep track of tasks and bugs. You can create issues to note down things that need to be done or fixed.</p>
+    <p>Go to the "Issues" tab in your repository and click "New issue." Describe the task or bug, and assign it to someone. This way, everyone knows what needs to be worked on.</p>
+
+    <h2>Exploring More GitHub Features</h2>
+    <p>GitHub has many more features to explore:</p>
+    <ul>
+        <li><code>GitHub Pages</code>: Host your website directly from a GitHub repository.</li>
+        <li><code>Actions</code>: Automate workflows, like running tests or deploying code.</li>
+        <li><code>Wiki</code>: Create documentation for your project.</li>
+        <li><code>Fork</code>: Create your own copy of someone else's repository to experiment with.</li>
+    </ul>
+
+    <p>And that's a brief introduction to the magical world of GitHub! With Git and GitHub, you can manage your projects, collaborate with friends, and share your work with the world. Happy coding!</p>
+
+</body>
+</html>
